@@ -6,7 +6,7 @@ import jsonpath
 from xToolkit import xfile
 from string import Template
 
-datas = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=1)
+datas = xfile.read(r"E:\CodeSpace\tiger-python-autoapitest\resources\Test.xls").excel_to_dict(sheet=1)
 # all_case = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=0)
 print("DATATTTT:", datas)
 print("DATAs22222:", os.getcwd())
