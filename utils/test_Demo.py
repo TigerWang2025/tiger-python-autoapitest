@@ -7,9 +7,8 @@ from xToolkit import xfile
 from string import Template
 
 datas = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=1)
-# all_case = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=0)
-print("DATATTTT:", datas)
-print("DATAs22222:", os.getcwd())
+print("打印文件内容:", datas)
+print("工作文件目录路径:", os.getcwd())
 dic = {}
 
 
@@ -44,7 +43,7 @@ if __name__ == '__main__':
     pytest.main([
         "-vs",
         "--capture=sys",
-        "test_framework.py",
+        "test_Demo.py",
         "--alluredir=allure-result"
     ])
 
