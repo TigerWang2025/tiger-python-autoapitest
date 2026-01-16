@@ -53,4 +53,4 @@ if __name__ == '__main__':
     ])
 
     # 生成 allure 报告
-    os.system("allure generate allure-result -o ./report-allure --clean")
+    os.system("allure generate allure-result -o ./report-allure --clean")  # --clean 可以覆盖之前的报告内容
