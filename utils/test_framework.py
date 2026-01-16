@@ -1,15 +1,19 @@
 import os
-
 import pytest
 import requests
 import jsonpath
 from xToolkit import xfile
 from string import Template
 
-datas = xfile.read(r"E:\CodeSpace\tiger-python-autoapitest\resources\Test.xls").excel_to_dict(sheet=1)
-# all_case = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=0)
+print("DATAs22222:", os.path.dirname(os.getcwd()))  # 当前执行文件的路径
+current_path1 = os.path.dirname(os.getcwd())  # 当前执行文件的上一层路径
+current_path = os.path.join(current_path1, "resources", "Test.xls")
+print("路径：", current_path)  # 当前执行文件的上一层路径，再拼接新的目录&文件的路径
+datas = xfile.read(current_path).excel_to_dict(sheet=1)
+# datas = xfile.read(r".\resources\Test.xls").excel_to_dict(sheet=0)  # 相对路径，建议使用相对路径
+# datas = xfile.read(r"D:\CodeSpace\tiger-python-autoapitest\resources\Test.xls").excel_to_dict(sheet=0)  # 绝对路径
 print("DATATTTT:", datas)
-print("DATAs22222:", os.getcwd())
+
 dic = {}
 
 
